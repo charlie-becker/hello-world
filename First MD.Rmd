@@ -1,0 +1,39 @@
+---
+title: "Testing R Markdown"
+author: Charles Becker
+date: "March 25, 2018"
+output: html_document
+---
+
+This is my first Markdown document
+
+Load dome data
+
+```{r}
+library(datasets)
+data(airquality)
+summary(airquality)
+```
+
+Here's a pairs plot of the data.
+
+```{r}
+pairs(airquality)
+```
+
+```{r}
+fit <- lm(Ozone ~ Solar.R + Wind + Temp, data = airquality)
+summary(fit)
+```
+
+Here's an unordered list.
+
+* Item one 
+* Item 2
+
+Ordered List
+
+1. First item
+2. Second Item
+
+
